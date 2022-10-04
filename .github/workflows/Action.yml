@@ -18,7 +18,7 @@ jobs:
 
     steps:
     - name: Send greeting to mona
-      if: "${{ github.event.inputs.message == 'monalisa'}}"
+      if: github.event.inputs.message == 'monalisa'
       run: echo "${{ github.event.inputs.message }} and  ${{ github.event.inputs.name }}"
       
     - name: Send greeting to cs
