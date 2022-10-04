@@ -11,11 +11,6 @@ on:
         - cschleiden
       message:
         required: true
-      use-emoji:
-        type: boolean
-        description: Include  emojis
-      environment:
-        type: environment
 
 jobs:
   greet:
