@@ -17,5 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send greeting
+    - name: Send greeting to mona
+      if: "${{ github.event.inputs.message == 'monalisa'}}"
+      run: echo "${{ github.event.inputs.message }} and  ${{ github.event.inputs.name }}"
+      
+    - name: Send greeting to cs
+      if: "${{ github.event.inputs.message == 'cschleiden'}}"
       run: echo "${{ github.event.inputs.message }} and  ${{ github.event.inputs.name }}"
